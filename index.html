@@ -8,13 +8,59 @@
 </head>
 <body>
 	<div id="app">
-		<p>{{ title }}</p>
-		<p>{{ array[0] }}</p>
-		<p>{{ robot.name }}</p>
-		<p>{{ gretting() }}</p>
+
+	<!-- <img v-bind:src="src" alt="alt"> -->
+	<hr>
+	<a v-bind:href="link"> click me </a>
+	<hr>
+	<span v-text="msg"></span>
+	<p v-html="html"></p>
+	<hr>
+
+	<p v-show="user==='Mostafijur'">
+		Show it
+	</p>
+	<p v-show="user!=='Mostafijur'">
+		Dont Show it
+	</p>
+	<hr>
+		<div v-if="type === 'A'">
+			A
+		</div>
+		<div v-else-if="type === 'B'">
+			B
+		</div>
+		<div v-else-if="type === 'C'">
+			C
+		</div>
+		<div v-else>
+			Not A/B/C
+		</div>
+		<hr>
+		<!-- <div v-for="(item, index, key) in usr">
+			{{ key+1 }}: 
+			{{ index }}: 
+			{{ item }}
+		  </div> -->
+
+		  <!-- <div v-for="n in 3">
+			{{ n }}
+		  </div> -->
+		  
+		  <p v-once>{{ user }}</p>
+		  <p>{{ user }}</p>
+		  {{ update() }}
+
+		  <hr>
+
+		  {{ event }}
+		  <button v-on:click="updateName">Click me</button>
+
+	
+
 	</div>
 
 
-<script src="app.js"></script>
+<script src="app.js"></scrip>
 </body>
 </html>
