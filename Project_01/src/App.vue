@@ -1,5 +1,9 @@
 <template>
-  <h1>{{ courseName }}s</h1>
+  <input type="text" v-model="courseName"> 
+  <br>
+  <br>
+  <input type="text" v-model="count">
+  <h1>{{ courseName }}</h1>
   <p>Course by {{ mentor }} </p>
   <button @click="count++">+ </button>
   <p>{{ count }}</p>
@@ -13,7 +17,7 @@
 
 <script setup>
   import {ref} from 'vue';
-      const courseName= ref("Vue JS 3 Course Namedfd");
+      const courseName= ref("Vue JS 3 Course Name");
       const mentor= ref("Mostafijur");
       let count= ref(0);
 </script>
